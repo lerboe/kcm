@@ -1,0 +1,13 @@
+[package]
+name = "kcm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+beeper = { path = "../beeper/beeper", default-features = false, features = ["http1"] }
+libc = "0.2.191"
+xbpf = "0.0.6"
+
+[build-dependencies]
+beeper = { path = "../beeper/beeper", default-features = false, features = ["http1", "build"] }
+xbpf = { version = "0.0.6", features = ["build"] }
